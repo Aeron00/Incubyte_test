@@ -20,6 +20,7 @@ def control_lunar_space_craft(start_pos : tuple, init_direc : str, commands_lst 
     cordinates = {"N":1, "S":1, "W":0, "E":0, "U":2, "D":2}
     current_direc = init_direc
     current_pos = list(start_pos)
+    
     for cmd in commands_lst:
            current_direc = Direction[current_direc][cmd]
            current_pos[cordinates[current_direc]] = current_pos[cordinates[current_direc]] + Position[cmd]
